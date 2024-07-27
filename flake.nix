@@ -32,6 +32,12 @@
             name = "ss3";
             sha256 = "r/grfMvbna6XpfovOiT96d7Mm4o06l4WzGX3VFGojYQ=";
           })
+          (pkgs.fetchFromGitHub {
+            owner = "nmfs-ost";
+            repo = "ss3-test-models";
+            rev = "ad02c34";
+            sha256 = "2nqEzzKQROlsmS9SLZ+H3Fv/QDWKUeedVZdX+1w8eqw=";
+          })
         ];
 
         sourceRoot = ".";

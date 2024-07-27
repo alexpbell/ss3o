@@ -15,7 +15,7 @@
       in pkgs.clangStdenv.mkDerivation {
 
         pname = "ss3o";
-        version = "0.0.1";
+        version = "0.0.2";
 
         srcs = [
           (pkgs.fetchFromGitHub {

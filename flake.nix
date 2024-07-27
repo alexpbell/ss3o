@@ -72,17 +72,17 @@
           rm admb/src/linad99/dtweedie.cpp
           rm admb/src/linad99/tweedie_logW.cpp
           mv admb/src/linad99/fix.cpp dtweedie.cpp
-          clang++ -c admb/src/linad99/*.cpp -Iadmb/include -D_USE_MATH_DEFINES
+          clang++ -c -g admb/src/linad99/*.cpp -Iadmb/include -D_USE_MATH_DEFINES
           mv expm.o linexpm.o
-          clang++ -c admb/src/tools99/*.cpp -Iadmb/include -D_USE_MATH_DEFINES       
-          clang++ -c admb/src/nh99/*.cpp -Iadmb/include -D_USE_MATH_DEFINES       
-          clang++ -c admb/src/df1b2-separable/*.cpp -Iadmb/include -D_USE_MATH_DEFINES
-          clang++ -c admb/src/sparse/*.cpp -Iadmb/include -D_USE_MATH_DEFINES
+          clang++ -c -g admb/src/tools99/*.cpp -Iadmb/include -D_USE_MATH_DEFINES       
+          clang++ -c -g admb/src/nh99/*.cpp -Iadmb/include -D_USE_MATH_DEFINES       
+          clang++ -c -g admb/src/df1b2-separable/*.cpp -Iadmb/include -D_USE_MATH_DEFINES
+          clang++ -c -g admb/src/sparse/*.cpp -Iadmb/include -D_USE_MATH_DEFINES
           sed "s/abs(\(.*parm_1(j, 8) > 0\))/\1/g" ss3.cpp > ss3_fix.cpp
           rm ss3.cpp
           mv ss3_fix.cpp ss3.cpp
-          clang++ -c ss3.cpp -Iadmb/include -D_USE_MATH_DEFINES
-          clang++ *.o -Iadmb/include/ -D_USE_MATH_DEFINES -o ss3o
+          clang++ -c -g ss3.cpp -Iadmb/include -D_USE_MATH_DEFINES
+          clang++ -g *.o -Iadmb/include/ -D_USE_MATH_DEFINES-o ss3o
       '';
 
         installPhase = ''

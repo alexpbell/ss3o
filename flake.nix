@@ -82,7 +82,7 @@
           rm ss3.cpp
           mv ss3_fix.cpp ss3.cpp
           clang++ -c -g ss3.cpp -Iadmb/include -D_USE_MATH_DEFINES
-          clang++ -g *.o -Iadmb/include/ -D_USE_MATH_DEFINES-o ss3o
+          clang++ -g *.o -Iadmb/include/ -D_USE_MATH_DEFINES -o ss3o
       '';
 
         installPhase = ''

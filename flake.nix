@@ -88,6 +88,11 @@
         installPhase = ''
           mkdir -p $out/bin
           install -t $out/bin ss3o
+          mkdir -p $out/data
+          cp source/models/Simple/starter.ss $out/data
+          cp source/models/Simple/control.ss $out/data
+          cp source/models/Simple/data.ss $out/data
+          cp source/models/Simple/forecast.ss $out/data
         '';   
 
      };

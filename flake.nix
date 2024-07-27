@@ -42,7 +42,7 @@
 
         sourceRoot = ".";
       
-        buildInputs = [ pkgs.flex ];
+        buildInputs = [ pkgs.flex pkgs.R ];
 
         buildPhase = ''
           flex admb/src/nh99/tpl2cpp.lex

@@ -81,6 +81,8 @@
           sed "s/abs(\(.*parm_1(j, 8) > 0\))/\1/g" ss3.cpp > ss3_fix.cpp
           rm ss3.cpp
           mv ss3_fix.cpp ss3.cpp
+          sed -e '/#include <ss3.htp>/rss3.htp' ss3.cpp > ss3_fix.cpp
+          sed "s/#include <ss3.htp>//g" ss3_fix.cppp > ss3.cpp
           clang++ -c -g ss3.cpp -Iadmb/include -D_USE_MATH_DEFINES
           clang++ -g *.o -Iadmb/include/ -D_USE_MATH_DEFINES -o ss3o
       '';

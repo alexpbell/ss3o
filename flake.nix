@@ -87,7 +87,6 @@
           sed -e '/#include <ss3.htp>/rss3.htp' ss3.cpp > ss3.cpp
           sed "s/#include <ss3.htp>//g" ss3.cpp > ss3.cpp
           rm ss3.htp
-          mv expm.o linexpm.o
           clang++ -c -g *.cpp -D_USE_MATH_DEFINES
           clang++ -g *.o -D_USE_MATH_DEFINES -o ss3o
       '';

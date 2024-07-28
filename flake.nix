@@ -51,15 +51,10 @@
           cat ss3/SS_biofxn.tpl ss3/SS_miscfxn.tpl ss3/SS_selex.tpl ss3/SS_popdyn.tpl ss3/SS_recruit.tpl ss3/SS_benchfore.tpl ss3/SS_expval.tpl ss3/SS_objfunc.tpl ss3/SS_write.tpl ss3/SS_write_ssnew.tpl ss3/SS_write_report.tpl ss3/SS_ALK.tpl ss3/SS_timevaryparm.tpl ss3/SS_tagrecap.tpl > SS_functions.temp
           cat ss3/SS_versioninfo_330safe.tpl ss3/SS_readstarter.tpl ss3/SS_readdata_330.tpl ss3/SS_readcontrol_330.tpl ss3/SS_param.tpl ss3/SS_prelim.tpl ss3/SS_global.tpl ss3/SS_proced.tpl SS_functions.temp > ss3.tpl
           ./tpl2cpp ss3
-          cp admb/src/nh99/*.h .
-          cp admb/src/nh99/evalxtrn.cpp .
-          cp admb/src/linad99/*.hpp .
-          cp admb/src/linad99/*.h .
-          cp admb/src/linad99/tweedie_logW.cpp .
-          cp admb/src/tools99/*.hpp .
-          cp admb/src/tools99/*.h .
-          cp admb/src/tools99/integrate.cpp .
-          cp admb/src/df1b2-separable/*.h .
+          cp admb/src/nh99/*.* .
+          cp admb/src/linad99/*.* .
+          cp admb/src/tools99/*.* .
+          cp admb/src/df1b2-separable/*.* .
           sed -i 's/#include <admodel.h>/#include "admodel.h"/g' *.*
           sed -i 's/#  include <admodel.h>/#include "admodel.h"/g' *.*
           sed -i 's/#include <fvar.hpp>/#include "fvar.hpp"/g' *.*

@@ -92,7 +92,9 @@
           rm ss31.cpp
           rm ss32.cpp
           rm getopt.cpp
+          rm integrate.cpp
           clang++ -c -g *.cpp -D_USE_MATH_DEFINES
+          cp admb/src/tools99/integrate.cpp .
           clang++ -g *.o -D_USE_MATH_DEFINES -o ss3o
       '';
 

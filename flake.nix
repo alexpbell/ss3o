@@ -55,6 +55,7 @@
           cp admb/src/nh99/evalxtrn.cpp .
           cp admb/src/linad99/*.hpp .
           cp admb/src/linad99/*.h .
+          cp admb/src/linad99/tweedie_logW.cpp .
           cp admb/src/tools99/*.hpp .
           cp admb/src/tools99/*.h .
           cp admb/src/tools99/integrate.cpp .

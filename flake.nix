@@ -58,6 +58,7 @@
           sed -i 's/#include <admodel.h>/#include "admodel.h"/g' *.*
           sed -i 's/#  include <admodel.h>/#include "admodel.h"/g' *.*
           sed -i 's/#include <fvar.hpp>/#include "fvar.hpp"/g' *.*
+          sed -i 's/#  include <fvar.hpp>/#include "fvar.hpp"/g' *.*
           sed -i 's/#include <df1b2fun.h>/#include "df1b2fun.h"/g' *.*
           sed -i 's/#include <adrndeff.h>/#include "adrndeff.h"/g' *.*
           sed -i 's/#include <tiny_ad.hpp>/#include "tiny_ad.hpp"/g' *.*
@@ -74,6 +75,7 @@
           sed -i 's/#include <df32fun.h>/#include "df32fun.h"/g' *.*
           sed -i 's/#include <df1b2fnl.h>/#include "df1b2fnl.h"/g' *.*
           sed -i 's/#include <df3fun.h>/#include "df3fun.h"/g' *.*
+          sed -i 's/#include "../linad99/betacf_val.hpp"/#include "betacf_val.hpp"/g' *.*
           sed "s/std::scientific < setp/std::scientific << std::setp/g" xfmmtr1.cpp > xfmmtr1.cpp
           sed 's/#include "tweedie_logW.cpp"//g' dtweedie.cpp > dtweedie2.cpp
           cat tweedie_logW.cpp >> dtweedie2.cpp

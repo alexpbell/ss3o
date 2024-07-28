@@ -72,7 +72,7 @@
           sed -i 's/#include <cifstrem.h>/#include "cifstrem.h"/g' *.*
           sed -i 's/#include <Vectorize.hpp>/#include "Vectorize.hpp"/g' *.*
           sed -i 's/#include <adpool.h>/#include "adpool.h"/g' *.*
-          sed -i 's/#include <tiny_wrap.hpp>/#include "tiny_wrap"/g' *.*
+          sed -i 's/#include <tiny_wrap.hpp>/#include "tiny_wrap.hpp"/g' *.*
           sed -i 's/#include <integrate_wrap.hpp>/#include "integrate_wrap.hpp"/g' *.*
           sed -i 's/#include <df32fun.h>/#include "df32fun.h"/g' *.*
           sed -i 's/#include <df1b2fnl.h>/#include "df1b2fnl.h"/g' *.*

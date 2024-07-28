@@ -79,7 +79,6 @@
           cat tweedie_logW.cpp >> dtweedie2.cpp
           mv dtweedie2.cpp dtweedie.cpp
           rm tweedie_logW.cpp
-          rm dtweedie2.cpp
           sed "s/abs(\(.*parm_1(j, 8) > 0\))/\1/g" ss3.cpp > ss31.cpp
           sed -e '/#include <ss3.htp>/rss3.htp' ss31.cpp > ss32.cpp
           sed "s/#include <ss3.htp>//g" ss32.cpp > ss33.cpp
@@ -87,7 +86,6 @@
           rm ss3.htp
           rm ss31.cpp
           rm ss32.cpp
-          rm ss33.cpp
           clang++ -c -g *.cpp -D_USE_MATH_DEFINES
           clang++ -g *.o -D_USE_MATH_DEFINES -o ss3o
       '';

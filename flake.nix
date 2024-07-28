@@ -63,6 +63,19 @@
           sed -i 's/#include <fvar.hpp>/#include "fvar.hpp"/g' *.*
           sed -i 's/#include <df1b2fun.h>/#include "df1b2fun.h"/g' *.*
           sed -i 's/#include <adrndeff.h>/#include "adrndeff.h"/g' *.*
+          sed -i 's/#include <tiny_ad.hpp>/#include "tiny_ad.hpp"/g' *.*
+          sed -i 's/#include <dfpool.h>/#include "dfpool.h"/g' *.*
+          sed -i 's/#include <ivector.h>/#include "ivector.h"/g' *.*
+          sed -i 's/#include <gradient_structure.h>/#include "gradient_structure.h"/g' *.*
+          sed -i 's/#include <imatrix.h>/#include "imatrix.h"/g' *.*
+          sed -i 's/#include <adstring.hpp>/#include "adstring.hpp"/g' *.*
+          sed -i 's/#include <cifstrem.h>/#include "cifstrem.h"/g' *.*
+          sed -i 's/#include <Vectorize.hpp>/#include "Vectorize.hpp"/g' *.*
+          sed -i 's/#include <adpool.h>/#include "adpool.h"/g' *.*
+          sed -i 's/#include <tiny_wrap.hpp>/#include "tiny_wrap"/g' *.*
+          sed -i 's/#include <integrate_wrap.hpp>/#include "integrate_wrap.hpp"/g' *.*
+          sed -i 's/#include <df32fun.h>/#include "df32fun.h"/g' *.*
+          sed -i 's/#include <df1b2fnl.h>/#include "df1b2fnl.h"/g' *.*
           sed "s/std::scientific < setp/std::scientific << std::setp/g" xfmmtr1.cpp > xfmmtr1.cpp
           sed 's/#include "tweedie_logW.cpp"//g' dtweedie.cpp > dtweedie.cpp
           cat tweedie_logW.cpp >> dtweedie.cpp

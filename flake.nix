@@ -92,9 +92,12 @@
           rm ss31.cpp
           rm ss32.cpp
           rm getopt.cpp
+          sed -e '/#include "integrate.cpp"/rintegrate.cpp' integrate.hpp > integrate2.hpp
+          sed 's/#include "integrate.cpp"//g' integrate2.hpp integrate3.hpp
+          mv integrate3.hpp integrate.hpp
+          rm integrate2.hpp
           rm integrate.cpp
           clang++ -c -g *.cpp -D_USE_MATH_DEFINES
-          cp admb/src/tools99/integrate.cpp .
           clang++ -g *.o -D_USE_MATH_DEFINES -o ss3o
       '';
 

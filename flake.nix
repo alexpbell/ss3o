@@ -52,7 +52,6 @@
           cat ss3/SS_versioninfo_330safe.tpl ss3/SS_readstarter.tpl ss3/SS_readdata_330.tpl ss3/SS_readcontrol_330.tpl ss3/SS_param.tpl ss3/SS_prelim.tpl ss3/SS_global.tpl ss3/SS_proced.tpl SS_functions.temp > ss3.tpl
           ./tpl2cpp ss3
           mkdir -p admb/include
-          cp ss3.htp admb/include
           cp admb/src/nh99/*.h admb/include
           cp admb/src/nh99/evalxtrn.cpp admb/include
           rm admb/src/nh99/evalxtrn.cpp
@@ -82,7 +81,9 @@
           rm ss3.cpp
           mv ss3_fix.cpp ss3.cpp
           sed -e '/#include <ss3.htp>/rss3.htp' ss3.cpp > ss3_fix.cpp
-          sed "s/#include <ss3.htp>//g" ss3_fix.cppp > ss3.cpp
+          sed "s/#include <ss3.htp>//g" ss3_fix.cpp > ss3.cpp
+          rm ss3.htp
+          rm ss3_fix.cpp
           clang++ -c -g ss3.cpp -Iadmb/include -D_USE_MATH_DEFINES
           clang++ -g *.o -Iadmb/include/ -D_USE_MATH_DEFINES -o ss3o
       '';

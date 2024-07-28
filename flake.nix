@@ -60,7 +60,9 @@
           sed -i 's/#include <fvar.hpp>/#include "fvar.hpp"/g' *.*
           sed -i 's/#  include <fvar.hpp>/#include "fvar.hpp"/g' *.*
           sed -i 's/#include <df1b2fun.h>/#include "df1b2fun.h"/g' *.*
+          sed -i 's/#  include <df1b2fun.h>/#include "df1b2fun.h"/g' *.*
           sed -i 's/#include <adrndeff.h>/#include "adrndeff.h"/g' *.*
+          sed -i 's/#  include <adrndeff.h>/#include "adrndeff.h"/g' *.*
           sed -i 's/#include <tiny_ad.hpp>/#include "tiny_ad.hpp"/g' *.*
           sed -i 's/#include <dfpool.h>/#include "dfpool.h"/g' *.*
           sed -i 's/#include <ivector.h>/#include "ivector.h"/g' *.*

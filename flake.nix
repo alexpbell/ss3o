@@ -80,13 +80,19 @@
           sed -i 's/#include <df1b2fnl.h>/#include "df1b2fnl.h"/g' *.*
           sed -i 's/#include <df3fun.h>/#include "df3fun.h"/g' *.*
           sed "s/std::scientific < setp/std::scientific << std::setp/g" xfmmtr1.cpp > xfmmtr1.cpp
-          sed 's/#include "tweedie_logW.cpp"//g' dtweedie.cpp > dtweedie.cpp
-          cat tweedie_logW.cpp >> dtweedie.cpp
+          sed 's/#include "tweedie_logW.cpp"//g' dtweedie.cpp > dtweedie2.cpp
+          cat tweedie_logW.cpp >> dtweedie2.cpp
+          mv dtweedie2.cpp dtweedie.cpp
           rm tweedie_logW.cpp
-          sed "s/abs(\(.*parm_1(j, 8) > 0\))/\1/g" ss3.cpp > ss3.cpp
-          sed -e '/#include <ss3.htp>/rss3.htp' ss3.cpp > ss3.cpp
-          sed "s/#include <ss3.htp>//g" ss3.cpp > ss3.cpp
+          rm dtweedie2.cpp
+          sed "s/abs(\(.*parm_1(j, 8) > 0\))/\1/g" ss3.cpp > ss31.cpp
+          sed -e '/#include <ss3.htp>/rss3.htp' ss31.cpp > ss32.cpp
+          sed "s/#include <ss3.htp>//g" ss32.cpp > ss33.cpp
+          mv ss33.cpp ss3.cpp
           rm ss3.htp
+          rm ss31.cpp
+          rm ss32.cpp
+          rm ss33.cpp
           clang++ -c -g *.cpp -D_USE_MATH_DEFINES
           clang++ -g *.o -D_USE_MATH_DEFINES -o ss3o
       '';

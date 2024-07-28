@@ -91,6 +91,7 @@
           rm ss3.htp
           rm ss31.cpp
           rm ss32.cpp
+          rm getopt.cpp
           clang++ -c -g *.cpp -D_USE_MATH_DEFINES
           clang++ -g *.o -D_USE_MATH_DEFINES -o ss3o
       '';

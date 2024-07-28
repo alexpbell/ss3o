@@ -59,8 +59,8 @@
           cp admb/src/tools99/*.h .
           cp admb/src/tools99/integrate.cpp .
           cp admb/src/df1b2-separable/*.h .
-          sed -i 's/#include <admodel.h>/#include "admodel.h"/g' *
-          sed -i 's/#include<admodel.h>/#include "admodel.h"/g' *
+          sed -i 's/#include <admodel.h>/#include "admodel.h"/g' *.*
+          sed -i 's/#include<admodel.h>/#include "admodel.h"/g' *.*
           sed "s/std::scientific < setp/std::scientific << std::setp/g" xfmmtr1.cpp > xfmmtr1.cpp
           sed 's/#include "tweedie_logW.cpp"//g' dtweedie.cpp > dtweedie.cpp
           cat tweedie_logW.cpp >> dtweedie.cpp

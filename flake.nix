@@ -84,6 +84,14 @@
           cat tweedie_logW.cpp >> dtweedie2.cpp
           mv dtweedie2.cpp dtweedie.cpp
           rm tweedie_logW.cpp
+          sed "s/abs(\(.*parm_1(j, 8) > 0\))/\1/g" ss3.cpp > ss31.cpp
+          sed -e '/#include <ss3.htp>/rss3.htp' ss31.cpp > ss32.cpp
+          sed "s/#include <ss3.htp>//g" ss32.cpp > ss33.cpp
+          mv ss33.cpp ss3.cpp
+          rm ss3.htp
+          rm ss31.cpp
+          rm ss32.cpp
+          rm getopt.cpp
       '';
 
         installPhase = ''

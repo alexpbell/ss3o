@@ -55,6 +55,7 @@
           cp admb/src/linad99/*.* .
           cp admb/src/tools99/*.* .
           cp admb/src/df1b2-separable/*.* .
+          cp admb/src/sparse/*.* .
           sed -i 's/#include <admodel.h>/#include "admodel.h"/g' *.*
           sed -i 's/#  include <admodel.h>/#include "admodel.h"/g' *.*
           sed -i 's/#include <fvar.hpp>/#include "fvar.hpp"/g' *.*
@@ -97,12 +98,13 @@
           mv integrate3.hpp integrate.hpp
           rm integrate2.hpp
           rm integrate.cpp
-          clang++ -c -g *.cpp -D_USE_MATH_DEFINES
+          clang++ -c *.cpp
+          clang++ *.o -o ss3o          
       '';
 
         installPhase = ''
           mkdir -p $out/bin
-          install -t $out/bin ss3.cpp
+          install -t $out/bin ss3o
           mkdir -p $out/data
           cp source/models/Simple/starter.ss $out/data
           cp source/models/Simple/control.ss $out/data

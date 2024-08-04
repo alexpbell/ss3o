@@ -97,6 +97,7 @@
           mv integrate3.hpp integrate.hpp
           rm integrate2.hpp
           rm integrate.cpp
+          clang++ -c -g *.cpp -D_USE_MATH_DEFINES
       '';
 
         installPhase = ''

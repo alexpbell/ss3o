@@ -99,6 +99,7 @@
           rm integrate2.hpp
           rm integrate.cpp
           rm evalxtrn.cpp
+          mv expm.o linexpm.o
           clang++ -c *.cpp
           clang++ *.o -o ss3o          
       '';

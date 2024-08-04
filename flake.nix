@@ -81,6 +81,9 @@
           sed -i 's/#include "\.\.\/linad99\/betacf_val.hpp"/#include "betacf_val.hpp"/g' *.*
           sed 's/std::scientific < setp/std::scientific << std::setp/g' xfmmtr1.cpp > xfmmtr1.cpp
           sed 's/#include "tweedie_logW.cpp"//g' dtweedie.cpp > dtweedie2.cpp
+          cat tweedie_logW.cpp >> dtweedie2.cpp
+          mv dtweedie2.cpp dtweedie.cpp
+          rm tweedie_logW.cpp
       '';
 
         installPhase = ''

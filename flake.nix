@@ -98,9 +98,9 @@
           mv integrate3.hpp integrate.hpp
           rm integrate2.hpp
           rm integrate.cpp
-          rm evalxtrn.cpp
-          mv expm.o linexpm.o
+          rm evalxtrn.cpp          
           clang++ -c *.cpp
+          mv expm.o linexpm.o
           clang++ *.o -o ss3o          
       '';
 

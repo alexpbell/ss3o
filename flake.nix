@@ -93,7 +93,7 @@
           rm ss32.cpp
           rm getopt.cpp
           sed -e '/#include "integrate.cpp"/rintegrate.cpp' integrate.hpp > integrate2.hpp
-          sed 's/#include "integrate.cpp"//g' integrate2.hpp integrate3.hpp
+          sed 's/#include "integrate.cpp"//g' integrate2.hpp > integrate3.hpp
           mv integrate3.hpp integrate.hpp
           rm integrate2.hpp
           rm integrate.cpp
